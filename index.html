@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        img.qr-code {
+            width: 30%; /* Уменьшаем QR-код вдвое */
+            height: auto;
+        }
+        .site-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px; /* Увеличенный размер */
+            font-weight: bold; /* Жирный текст */
+            margin-top: 20px;
+            color: #333; /* Более темный цвет для лучшей читабельности */
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            width: 29%; /* Ширина равна ширине QR-кода */
+            align-items: center;
+        }
+        .button {
+            width: 100%;
+            padding: 15px; /* Увеличенный padding */
+            color: #fff;
+            border: none;
+            border-radius: 25px; /* Более закругленные углы */
+            text-decoration: none;
+            margin-top: 10px;
+            background-size: 400% 400%;
+            animation: Gradient 15s ease infinite;
+            font-weight: bold; /* Жирный текст */
+        }
+        .button.whatsapp { background-image: linear-gradient(45deg, #00f260, #0575e6, #00f260, #0575e6); } /* Ярко-зеленый градиент */
+        .button.telegram { background-image: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d, #1a2a6c); } /* Ярко-синий градиент */
+
+        @keyframes Gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <img src="1.png" alt="QR Code" class="qr-code">
+    <div class="site-title">BeeClean 🐝</div>
+    <div class="buttons">
+        <a href="https://t.me/yourusername" target="_blank" class="button telegram">Telegram</a>
+        <a href="https://wa.me/yourphonenumber" target="_blank" class="button whatsapp">WhatsApp</a>
+    </div>
+</body>
+</html>
